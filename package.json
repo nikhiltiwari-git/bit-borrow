@@ -1,0 +1,36 @@
+{
+  "name": "bit-borrow",
+  "version": "0.0.2",
+  "description": "peer-to-peer lending and borrowiing platform on bitcoin blockchain.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhiltiwari-git/bit-borrow.git"
+  },
+  "keywords": [
+    "peer-to-peer",
+    "lending",
+    "borrowing",
+    "$USD",
+    "$BTC",
+    "self-custody"
+  ],
+  "author": "Nikhil Tiwari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikhiltiwari-git/bit-borrow/issues"
+  },
+  "homepage": "https://github.com/nikhiltiwari-git/bit-borrow#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "path": "^0.12.7"
+  }
+}

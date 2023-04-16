@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Adding a contract
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/forms.css">
+
+</head>
+
+<body>
+    <div class="backdrop"></div>
+    <header class="main-header">
+        <button id="side-menu-toggle">Menu</button>
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item">
+                    <a class=" " href="/">Home </a>
+                </li>
+                <li class="main-header__item">
+                    <a class=" " href="/offer/add-offer">Add an Offer</a>
+                </li>
+                <li class="main-header__item">
+                    <a class=" " href="/offer">
+                        Contracts
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form class="product-form" action="/offer/add-offer" method="POST">
+        <div class="form-control">
+            <label for="lending">Lend</label>
+            <input type="radio" name="type" value="lend">
+            <label for="borrowing">Borrow</label>
+            <input type="radio" name="type" value="Borrow">
+        </div>
+            
+        <div class="form-control">
+            <label for="amount">Min Amount</label>
+            <input type="number" name="minAmount">
+        </div>
+            
+        <div class="form-control">
+            <label for="amount">Max Amount</label>
+            <input type="number" name="maxAmount">
+        </div>
+            
+        <div class="form-control">
+            <label for="apy">APY ( in % )</label>
+            <input type="number" name="apy">
+        </div>
+            
+        <div class="form-control">
+            <label for="ltv">LTV ( in % )</label>
+            <input type="number" name="ltv">
+        </div>
+            
+        <div class="form-control">
+            <label for="timeFrame">Duration (in months )</label>
+            <input type="number" name="timeFrame">
+
+        </div>
+            
+            <button class ="btn" type="submit">List Offer</button>
+
+        </form>
+
+    </main>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

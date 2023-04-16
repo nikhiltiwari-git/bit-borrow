@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <title>
+        <%= offer.type %>
+    </title>
+
+</head>
+
+<body>
+    <div class="backdrop"></div>
+    <header class="main-header">
+        <button id="side-menu-toggle">Menu</button>
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item">
+                    <a class=" " href="/">Home </a>
+                </li>
+                <li class="main-header__item">
+                    <a class=" " href="/offer/add-offer">Add an Offer</a>
+                </li>
+                <li class="main-header__item">
+                    <a class=" " href="/offer">
+                        Contracts
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="centered">
+        <h1>
+
+            <%= offer.type %>
+        </h1>
+        
+
+        <h2>Amount :
+            <%= offer.minAmount %>-<%= offer.maxAmount %>
+        </h2>
+        <p>
+            LTV :
+            <%= offer.ltv %>
+        </p>
+        <p>
+            APY :
+            <%= offer.apy %>
+        </p>
+        <p>
+            Time Duration :
+            <%= offer.timeFrame %>
+        </p>
+        <hr>
+        <h2>Your Details !</h2>
+        <form class="product-form" action="/offer/add-offer" method="POST">
+                
+            <div class="form-control">
+                <label for="amount">Amount (in $)</label>
+                <input type="number" name="amount">
+            </div>
+                
+            <div class="form-control">
+                <label for="publicKey">Your Public key</label>
+                <input type="text" name="publicKey">
+            </div>
+
+            <div class="form-control">
+                <label for="publicKey">Receiving address</label>
+                <input type="text" name="publicKey">
+            </div>
+                
+            <div class="form-control">
+                <label for="timeFrame">Duration (in months )</label>
+                <input type="number" name="timeFrame">
+            </div>
+
+                <button class ="btn" type="submit">Accept Offer</button>
+            </form>
+    </main>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

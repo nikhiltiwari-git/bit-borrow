@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Active Offers</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+
+    <div class="backdrop"></div>
+    <header class="main-header">
+        <button id="side-menu-toggle">Menu</button>
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item">
+                    <a class=" " href="/">Home </a>
+                </li>
+                <li class="main-header__item">
+                    <a class=" " href="/offer/add-offer">Add an Offer</a>
+                </li>
+                <li class="main-header__item">
+                    <a class=" " href="/offer">
+                        Contracts
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <% if (offs.length> 0) { %>
+            <div class="grid">
+                <% for (let offer of offs) { %>
+                    <article class="card offer-item">
+                        <header class="card__header">
+                            
+                            <h1 class="product__title">
+                                <%= offer.type %>
+                            </h1>
+                        </header>
+                        <div class="card__content">
+                            
+                            <p class="product__price">
+                                Offer Amount
+                                <span>$<%= offer.minAmount %> - $<%= offer.maxAmount %></span>
+                                
+                            </p>
+                            <p class="product__description">
+                                APY 
+                                <%= offer.apy %>
+                            </p>
+                            <p class="product__description">
+                                LTV %
+                                <%= offer.ltv %>
+                                
+                            </p>
+                            <p class="product__description">
+                                Time
+                                <%= offer.timeFrame %>
+                            </p>
+                            <br>
+                            <p class="product__description">
+                                <a href="/offer/contract/<%= offer._id %>"> Details</a>
+                            </p>
+                        </div>
+                        
+                        
+                        
+                    </article>
+                    <% } %>
+            </div>
+            <% } else { %>
+                <h1>No Offers Found!</h1>
+                <% } %>
+    </main>
+
+</body>
+
+</html>
