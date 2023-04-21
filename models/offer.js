@@ -27,6 +27,14 @@ const offerSchema = new Schema({
         type: Number,
         required: true
     },
+    publicKey: {
+        type: String,
+        requried: true
+    },
+    recAddress: {
+        type: String,
+        requried: true
+    },
     offerId: {
         type: Schema.Types.ObjectId,
         required: false

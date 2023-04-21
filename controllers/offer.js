@@ -11,6 +11,8 @@ exports.postAddOffer = (req, res, next) => {
     const apy = req.body.apy ;
     const ltv = req.body.ltv ;
     const timeFrame = req.body.timeFrame ;
+    const publicKey = req.body.publicKey ;
+    const recAddress = req.body.recAddress ;
 
     const offer = new Offer({
         type: type,
@@ -18,7 +20,9 @@ exports.postAddOffer = (req, res, next) => {
         maxAmount: maxAmount, 
         apy: apy,
         ltv: ltv,
-        timeFrame: timeFrame
+        timeFrame: timeFrame,
+        publicKey: publicKey,
+        recAddress: recAddress
     });
 
     offer
@@ -30,7 +34,7 @@ exports.postAddOffer = (req, res, next) => {
         console.log(err);
     })
 
-    // console.log(req.body,req.user);
+    console.log(req.body);
     res.redirect('/offer');
 };
 

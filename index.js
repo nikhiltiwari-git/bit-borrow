@@ -13,6 +13,7 @@ const errorController = require('./controllers/error');
 const homeRouter = require('./routes/home');
 const offerRouter = require('./routes/offer');
 const userRouter = require('./routes/user');
+const contractRouter = require('./routes/contract');
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/offer', offerRouter);
 app.use('/user', userRouter);
+app.use('/contract', contractRouter);
 app.use(homeRouter);
 
 app.use(errorController.get404);

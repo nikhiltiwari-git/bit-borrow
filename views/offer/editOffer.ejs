@@ -38,12 +38,12 @@
 
     <main>
         <form class="product-form" action="/offer/add-offer" method="POST">
-        <div class="form-control">
+        <!-- <div class="form-control"> -->
             <label for="lending">Lend</label>
             <input type="radio" name="type" value="lend">
             <label for="borrowing">Borrow</label>
             <input type="radio" name="type" value="Borrow">
-        </div>
+        <!-- </div> -->
             
         <div class="form-control">
             <label for="amount">Min Amount</label>
@@ -68,10 +68,19 @@
         <div class="form-control">
             <label for="timeFrame">Duration (in months )</label>
             <input type="number" name="timeFrame">
+        </div>
 
+        <div class="form-control">
+            <label for="recAddress">Receiving Address</label>
+            <input type="text" name="recAddress">
+        </div>
+
+        <div class="form-control">
+            <label for="publicKey">Public Key</label>
+            <input type="text" name="publicKey">
         </div>
             
-            <button class ="btn" type="submit">List Offer</button>
+        <button class ="btn" type="submit">List Offer</button>
 
         </form>
 
