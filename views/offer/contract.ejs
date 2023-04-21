@@ -43,7 +43,6 @@
             <%= offer.type %>
         </h1>
         
-
         <h2>Amount :
             <%= offer.minAmount %>-<%= offer.maxAmount %>
         </h2>
@@ -51,6 +50,7 @@
             LTV :
             <%= offer.ltv %>
         </p>
+
         <p>
             APY :
             <%= offer.apy %>
@@ -61,7 +61,7 @@
         </p>
         <hr>
         <h2>Your Details !</h2>
-        <form class="product-form" action="/offer/add-offer" method="POST">
+        <form class="product-form" action="/contract/active" method="POST">
                 
             <div class="form-control">
                 <label for="amount">Amount (in $)</label>
@@ -69,22 +69,25 @@
             </div>
                 
             <div class="form-control">
-                <label for="publicKey">Your Public key</label>
-                <input type="text" name="publicKey">
+                <label for="pubKey2">Your Public key</label>
+                <input type="text" name="pubKey2">
             </div>
 
             <div class="form-control">
-                <label for="publicKey">Receiving address</label>
-                <input type="text" name="publicKey">
+                <label for="recAddress2">Receiving address</label>
+                <input type="text" name="recAddress2">
             </div>
-                
-            <div class="form-control">
-                <label for="timeFrame">Duration (in months )</label>
-                <input type="number" name="timeFrame">
-            </div>
+            
+            <input type="hidden" name="adId" value=<%= offer._id %>>
+            <input type="hidden" name="apy" value=<%= offer.apy %>>
+            <input type="hidden" name="ltv" value=<%= offer.ltv %>>
+            <input type="hidden" name="duration" value=<%= offer.timeFrame %>>
+            <input type="hidden" name="recAddress1" value=<%= offer.recAddress %>>
+            <input type="hidden" name="pubKey1" value=<%= offer.publicKey %>>
 
-                <button class ="btn" type="submit">Accept Offer</button>
+            <button class ="btn" type="submit">Accept Offer</button>
             </form>
+            
     </main>
     <script src="/js/main.js"></script>
 </body>
